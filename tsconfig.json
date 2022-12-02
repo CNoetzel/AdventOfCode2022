@@ -1,0 +1,15 @@
+{
+  "extends": "./node_modules/gts/tsconfig-google.json",
+  "compilerOptions": {
+    "target": "es2022",
+    "outDir": "build",
+    "sourceMap": false,
+    "rootDir": "."
+  },
+  "include": [
+    "challenges/**/*.ts"
+  ],
+  "exclude": [
+      "node_modules"
+  ]
+}

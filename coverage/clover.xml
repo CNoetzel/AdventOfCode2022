@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1669983045376" clover="3.2.0">
+  <project timestamp="1669983045376" name="All files">
+    <metrics statements="48" coveredstatements="38" conditionals="8" coveredconditionals="7" methods="18" coveredmethods="14" elements="74" coveredelements="59" complexity="0" loc="48" ncloc="48" packages="3" files="3" classes="3"/>
+    <package name="challenges">
+      <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/carsten/workspace/AdventOfCode_2022/challenges/index.ts">
+        <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="challenges.day1">
+      <metrics statements="21" coveredstatements="21" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="8"/>
+      <file name="day1.ts" path="/Users/carsten/workspace/AdventOfCode_2022/challenges/day1/day1.ts">
+        <metrics statements="21" coveredstatements="21" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="8"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="17" count="28" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="8" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+        <line num="22" count="20" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="34" count="16" type="stmt"/>
+        <line num="36" count="4" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="challenges.day2">
+      <metrics statements="17" coveredstatements="17" conditionals="6" coveredconditionals="5" methods="6" coveredmethods="6"/>
+      <file name="day2.ts" path="/Users/carsten/workspace/AdventOfCode_2022/challenges/day2/day2.ts">
+        <metrics statements="17" coveredstatements="17" conditionals="6" coveredconditionals="5" methods="6" coveredmethods="6"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="45" count="2" type="stmt"/>
+        <line num="46" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="50" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="53" count="2" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

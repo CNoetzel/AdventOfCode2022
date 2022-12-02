@@ -1,0 +1,8 @@
+# Dependencies
+/node_modules
+
+# Build-Folder
+/build
+
+# VSCode
+.vscode
