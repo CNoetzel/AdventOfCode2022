@@ -4,5 +4,8 @@
 # Build-Folder
 /build
 
+# Testing
+/coverage
+
 # VSCode
 .vscode
