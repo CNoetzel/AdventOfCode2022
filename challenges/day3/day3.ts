@@ -1,5 +1,4 @@
 import * as fs from 'fs';
-import {listenerCount} from 'process';
 import * as readline from 'readline';
 
 const file = (path: string) =>
