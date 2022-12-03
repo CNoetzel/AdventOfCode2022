@@ -46,8 +46,7 @@ const file = (path: string) =>
 // calcuate score knowing X,Y,Z meaning loose, draw, win --> ScoreMap.PartTwo
 export const getScore = async (path: string, strategy: Strategy) =>
   new Promise<number>(res => {
-    const scoreMap =
-    strategy === Strategy.PartOne ? scoreMapOne : scoreMapTwo;
+    const scoreMap = strategy === Strategy.PartOne ? scoreMapOne : scoreMapTwo;
     let score = 0;
     file(path)
       .on('line', line => {
