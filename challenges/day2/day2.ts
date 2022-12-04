@@ -2,8 +2,8 @@ import * as fs from 'fs';
 import * as readline from 'readline';
 
 export enum Strategy {
-  PartOne,
-  PartTwo,
+  PART_ONE,
+  PART_TWO,
 }
 
 // Win = 6, Draw = 3, Lost = 0
@@ -46,7 +46,7 @@ const file = (path: string) =>
 // calcuate score knowing X,Y,Z meaning loose, draw, win --> ScoreMap.PartTwo
 export const getScore = async (path: string, strategy: Strategy) =>
   new Promise<number>(res => {
-    const scoreMap = strategy === Strategy.PartOne ? scoreMapOne : scoreMapTwo;
+    const scoreMap = strategy === Strategy.PART_ONE ? scoreMapOne : scoreMapTwo;
     let score = 0;
     file(path)
       .on('line', line => {

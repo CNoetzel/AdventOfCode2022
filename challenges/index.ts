@@ -1,6 +1,7 @@
 import {getCalories} from './day1/day1';
 import {getScore, Strategy} from './day2/day2';
 import {getPrioritySum, getPrioritySumOfGroups} from './day3/day3';
+import {countContainments, ContainmentType} from './day4/day4';
 
 // Day1
 const inputPathDayOne = 'challenges/day1/input/challenge.txt';
@@ -15,12 +16,12 @@ getCalories(inputPathDayOne, 3).then(highestCaloriesTopThree =>
 
 // Day 2
 const inputPathDayTwo = 'challenges/day2/input/challenge.txt';
-getScore(inputPathDayTwo, Strategy.PartOne).then(score =>
+getScore(inputPathDayTwo, Strategy.PART_ONE).then(score =>
   console.log(
     `Day 2 Part 1 - Score thinking X,Y,Z is rock, paper, sciccsors: ${score}`
   )
 );
-getScore(inputPathDayTwo, Strategy.PartTwo).then(score =>
+getScore(inputPathDayTwo, Strategy.PART_TWO).then(score =>
   console.log(
     `Day 2 Part 2 - Score knowing X,Y,Z is loose, draw, win: ${score}`
   )
@@ -33,4 +34,13 @@ getPrioritySum(inputPathDayThree).then(sum =>
 );
 getPrioritySumOfGroups(inputPathDayThree).then(sum =>
   console.log(`Day 3 Part 2 - Summed up priority of group items: ${sum}`)
+);
+
+// Day 4
+const inputPathDayFour = 'challenges/day4/input/challenge.txt';
+countContainments(inputPathDayFour, ContainmentType.FULL).then(count =>
+  console.log(`Day 4 Part 1 - Number of full containments: ${count}`)
+);
+countContainments(inputPathDayFour, ContainmentType.PARTIAL).then(count =>
+  console.log(`Day 4 Part 2 - Number of partial containments: ${count}`)
 );
