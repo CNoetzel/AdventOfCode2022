@@ -2,6 +2,7 @@ import {getCalories} from './day1/day1';
 import {getScore, Strategy} from './day2/day2';
 import {getPrioritySum, getPrioritySumOfGroups} from './day3/day3';
 import {countContainments, ContainmentType} from './day4/day4';
+import {getRearangementOutput, MoverType} from './day5/day5';
 
 // Day1
 const inputPathDayOne = 'challenges/day1/input/challenge.txt';
@@ -43,4 +44,13 @@ countContainments(inputPathDayFour, ContainmentType.FULL).then(count =>
 );
 countContainments(inputPathDayFour, ContainmentType.PARTIAL).then(count =>
   console.log(`Day 4 Part 2 - Number of partial containments: ${count}`)
+);
+
+// Day 5
+const inputPathDayFive = 'challenges/day5/input/challenge.txt';
+getRearangementOutput(inputPathDayFive, 9, MoverType.CRATEMOVER_9000).then(
+  out => console.log(`Day 5 Part 1 - CrateMover 9000 output: ${out}`)
+);
+getRearangementOutput(inputPathDayFive, 9, MoverType.CRATEMOVER_9001).then(
+  out => console.log(`Day 5 Part 2 - CrateMover 9001 output: ${out}`)
 );
