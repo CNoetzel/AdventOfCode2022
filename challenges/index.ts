@@ -3,6 +3,11 @@ import {getScore, Strategy} from './day2/day2';
 import {getPrioritySum, getPrioritySumOfGroups} from './day3/day3';
 import {countContainments, ContainmentType} from './day4/day4';
 import {getRearangementOutput, MoverType} from './day5/day5';
+import {getNumberOfCharactersToFirstMarker} from './day6/day6';
+import {
+  sizeOfSmallestDirectoryToDelete,
+  sumFolderSizeForThreshold,
+} from './day7/day7';
 
 // Day1
 const inputPathDayOne = 'challenges/day1/input/challenge.txt';
@@ -53,4 +58,26 @@ getRearangementOutput(inputPathDayFive, 9, MoverType.CRATEMOVER_9000).then(
 );
 getRearangementOutput(inputPathDayFive, 9, MoverType.CRATEMOVER_9001).then(
   out => console.log(`Day 5 Part 2 - CrateMover 9001 output: ${out}`)
+);
+
+// Day 6
+const inputPathDaySix = 'challenges/day6/input/challenge.txt';
+getNumberOfCharactersToFirstMarker(inputPathDaySix, 4).then(number =>
+  console.log(
+    `Day 6 Part 1 - Number of chars to first packet marker: ${number}`
+  )
+);
+getNumberOfCharactersToFirstMarker(inputPathDaySix, 14).then(number =>
+  console.log(
+    `Day 6 Part 2 - Number of chars to first message marker: ${number}`
+  )
+);
+
+// Day 7
+const inputPathDaySeven = 'challenges/day7/input/challenge.txt';
+sumFolderSizeForThreshold(inputPathDaySeven, 100000).then(sum =>
+  console.log(`Day 7 Part 1 - Sum of folders with size <= 100000: ${sum}`)
+);
+sizeOfSmallestDirectoryToDelete(inputPathDaySeven).then(size =>
+  console.log(`Day 7 Part 2 - Size of folder to delete: ${size}`)
 );
