@@ -1,6 +1,5 @@
 import * as fs from 'fs';
 import * as readline from 'readline';
-import {getScore} from '../day2/day2';
 
 enum Direction {
   TOP,

@@ -9,6 +9,7 @@ import {
   sumFolderSizeForThreshold,
 } from './day7/day7';
 import {getHighestScenicScore, getNumberOfVisibleTrees} from './day8/day8';
+import {getNumberOfPositionsVisitedByTail} from './day9/day9';
 
 // Day1
 const inputPathDayOne = 'challenges/day1/input/challenge.txt';
@@ -90,4 +91,13 @@ getNumberOfVisibleTrees(inputPathDayEight).then(count =>
 );
 getHighestScenicScore(inputPathDayEight).then(score =>
   console.log(`Day 8 Part 2 - Highest scenic score is: ${score}`)
+);
+
+// Day 9
+const inputPathDayNine = 'challenges/day9/input/challenge.txt';
+getNumberOfPositionsVisitedByTail(inputPathDayNine, 2).then(count =>
+  console.log(`Day 9 Part 1 - Number positions visited at least once: ${count}`)
+);
+getNumberOfPositionsVisitedByTail(inputPathDayNine, 10).then(count =>
+  console.log(`Day 9 Part 2 - Number positions visited at least once: ${count}`)
 );
