@@ -8,6 +8,7 @@ import {
   sizeOfSmallestDirectoryToDelete,
   sumFolderSizeForThreshold,
 } from './day7/day7';
+import {getHighestScenicScore, getNumberOfVisibleTrees} from './day8/day8';
 
 // Day1
 const inputPathDayOne = 'challenges/day1/input/challenge.txt';
@@ -80,4 +81,13 @@ sumFolderSizeForThreshold(inputPathDaySeven, 100000).then(sum =>
 );
 sizeOfSmallestDirectoryToDelete(inputPathDaySeven).then(size =>
   console.log(`Day 7 Part 2 - Size of folder to delete: ${size}`)
+);
+
+// Day 8
+const inputPathDayEight = 'challenges/day8/input/challenge.txt';
+getNumberOfVisibleTrees(inputPathDayEight).then(count =>
+  console.log(`Day 8 Part 1 - Number of visible trees: ${count}`)
+);
+getHighestScenicScore(inputPathDayEight).then(score =>
+  console.log(`Day 8 Part 2 - Highest scenic score is: ${score}`)
 );
