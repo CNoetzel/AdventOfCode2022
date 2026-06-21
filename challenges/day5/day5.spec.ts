@@ -1,4 +1,4 @@
-import { describe, it, expect } from '@jest/globals';
+import {describe, it, expect} from '@jest/globals';
 import {getRearangementOutput, MoverType} from './day5';
 
 describe('testsuite Day 5', () => {
@@ -8,8 +8,9 @@ describe('testsuite Day 5', () => {
     const output = await getRearangementOutput(
       testInput,
       3,
-      MoverType.CRATEMOVER_9000
+      MoverType.CRATEMOVER_9000,
     );
+
     expect(output).toBe('CMZ');
   });
 
@@ -17,8 +18,9 @@ describe('testsuite Day 5', () => {
     const count = await getRearangementOutput(
       testInput,
       3,
-      MoverType.CRATEMOVER_9001
+      MoverType.CRATEMOVER_9001,
     );
+
     expect(count).toBe('MCD');
   });
 });

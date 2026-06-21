@@ -1,4 +1,4 @@
-import { describe, it, expect } from '@jest/globals';
+import {describe, it, expect} from '@jest/globals';
 import {getNumberOfCharactersToFirstMarker} from './day6';
 
 describe('testsuite Day 6', () => {
@@ -6,11 +6,13 @@ describe('testsuite Day 6', () => {
 
   it('should count number of characters to first packet marker correctly', async () => {
     const number = await getNumberOfCharactersToFirstMarker(testInput, 4);
+
     expect(number).toBe(7);
   });
 
   it('should count number of characters to first message marker correctly', async () => {
     const number = await getNumberOfCharactersToFirstMarker(testInput, 14);
+
     expect(number).toBe(19);
   });
 });

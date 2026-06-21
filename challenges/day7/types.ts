@@ -24,7 +24,7 @@ export class Folder {
   getSize = (): number => {
     const folderSize = this.subFolders.reduce(
       (acc, folder) => acc + folder.getSize(),
-      0
+      0,
     );
     const fileSize = this.files.reduce((acc, file) => acc + file.size, 0);
     return folderSize + fileSize;

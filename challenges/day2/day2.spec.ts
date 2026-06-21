@@ -1,4 +1,4 @@
-import { describe, it, expect } from '@jest/globals';
+import {describe, it, expect} from '@jest/globals';
 import {getScore, Strategy} from './day2';
 
 describe('testsuite Day 2', () => {
@@ -6,11 +6,13 @@ describe('testsuite Day 2', () => {
 
   it('should calculate score when following strategy from part one', async () => {
     const score = await getScore(testInput, Strategy.PART_ONE);
+
     expect(score).toBe(15);
   });
 
   it('should calculate score when following strategy from part two', async () => {
     const score = await getScore(testInput, Strategy.PART_TWO);
+
     expect(score).toBe(12);
   });
 });

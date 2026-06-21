@@ -39,9 +39,11 @@ export const readFile = async (path: string, stackSize: number) =>
             const stackNumber = Math.floor(i / 4);
             if (chars[i].trim() !== '') {
               const stack = stacks[stackNumber];
-              stack
-                ? stack.unshift(chars[i])
-                : (stacks[stackNumber] = new Array(chars[i]));
+              if (stack) {
+                stack.unshift(chars[i]);
+              } else {
+                stacks[stackNumber] = new Array(chars[i]);
+              }
             }
           }
         } else {
@@ -63,7 +65,7 @@ export const readFile = async (path: string, stackSize: number) =>
 export const getRearangementOutput = async (
   path: string,
   stackSize: number,
-  moverType: MoverType
+  moverType: MoverType,
 ): Promise<string> => {
   const {stacks, commands} = await readFile(path, stackSize);
 

@@ -13,91 +13,95 @@ import {getNumberOfPositionsVisitedByTail} from './day9/day9';
 
 // Day1
 const inputPathDayOne = 'challenges/day1/input/challenge.txt';
-getCalories(inputPathDayOne, 1).then(highestCalories =>
-  console.log(`Day 1 Part 1 - Highest calories: ${highestCalories}`)
+void getCalories(inputPathDayOne, 1).then(highestCalories =>
+  console.log(`Day 1 Part 1 - Highest calories: ${highestCalories}`),
 );
-getCalories(inputPathDayOne, 3).then(highestCaloriesTopThree =>
+void getCalories(inputPathDayOne, 3).then(highestCaloriesTopThree =>
   console.log(
-    `Day 1 Part 2 - Highest calories (top three): ${highestCaloriesTopThree}`
-  )
+    `Day 1 Part 2 - Highest calories (top three): ${highestCaloriesTopThree}`,
+  ),
 );
 
 // Day 2
 const inputPathDayTwo = 'challenges/day2/input/challenge.txt';
-getScore(inputPathDayTwo, Strategy.PART_ONE).then(score =>
+void getScore(inputPathDayTwo, Strategy.PART_ONE).then(score =>
   console.log(
-    `Day 2 Part 1 - Score thinking X,Y,Z is rock, paper, sciccsors: ${score}`
-  )
+    `Day 2 Part 1 - Score thinking X,Y,Z is rock, paper, sciccsors: ${score}`,
+  ),
 );
-getScore(inputPathDayTwo, Strategy.PART_TWO).then(score =>
+void getScore(inputPathDayTwo, Strategy.PART_TWO).then(score =>
   console.log(
-    `Day 2 Part 2 - Score knowing X,Y,Z is loose, draw, win: ${score}`
-  )
+    `Day 2 Part 2 - Score knowing X,Y,Z is loose, draw, win: ${score}`,
+  ),
 );
 
 // Day 3
 const inputPathDayThree = 'challenges/day3/input/challenge.txt';
-getPrioritySum(inputPathDayThree).then(sum =>
-  console.log(`Day 3 Part 1 - Summed up priority of rucksack item: ${sum}`)
+void getPrioritySum(inputPathDayThree).then(sum =>
+  console.log(`Day 3 Part 1 - Summed up priority of rucksack item: ${sum}`),
 );
-getPrioritySumOfGroups(inputPathDayThree).then(sum =>
-  console.log(`Day 3 Part 2 - Summed up priority of group items: ${sum}`)
+void getPrioritySumOfGroups(inputPathDayThree).then(sum =>
+  console.log(`Day 3 Part 2 - Summed up priority of group items: ${sum}`),
 );
 
 // Day 4
 const inputPathDayFour = 'challenges/day4/input/challenge.txt';
-countContainments(inputPathDayFour, ContainmentType.FULL).then(count =>
-  console.log(`Day 4 Part 1 - Number of full containments: ${count}`)
+void countContainments(inputPathDayFour, ContainmentType.FULL).then(count =>
+  console.log(`Day 4 Part 1 - Number of full containments: ${count}`),
 );
-countContainments(inputPathDayFour, ContainmentType.PARTIAL).then(count =>
-  console.log(`Day 4 Part 2 - Number of partial containments: ${count}`)
+void countContainments(inputPathDayFour, ContainmentType.PARTIAL).then(count =>
+  console.log(`Day 4 Part 2 - Number of partial containments: ${count}`),
 );
 
 // Day 5
 const inputPathDayFive = 'challenges/day5/input/challenge.txt';
-getRearangementOutput(inputPathDayFive, 9, MoverType.CRATEMOVER_9000).then(
-  out => console.log(`Day 5 Part 1 - CrateMover 9000 output: ${out}`)
+void getRearangementOutput(inputPathDayFive, 9, MoverType.CRATEMOVER_9000).then(
+  out => console.log(`Day 5 Part 1 - CrateMover 9000 output: ${out}`),
 );
-getRearangementOutput(inputPathDayFive, 9, MoverType.CRATEMOVER_9001).then(
-  out => console.log(`Day 5 Part 2 - CrateMover 9001 output: ${out}`)
+void getRearangementOutput(inputPathDayFive, 9, MoverType.CRATEMOVER_9001).then(
+  out => console.log(`Day 5 Part 2 - CrateMover 9001 output: ${out}`),
 );
 
 // Day 6
 const inputPathDaySix = 'challenges/day6/input/challenge.txt';
-getNumberOfCharactersToFirstMarker(inputPathDaySix, 4).then(number =>
+void getNumberOfCharactersToFirstMarker(inputPathDaySix, 4).then(number =>
   console.log(
-    `Day 6 Part 1 - Number of chars to first packet marker: ${number}`
-  )
+    `Day 6 Part 1 - Number of chars to first packet marker: ${number}`,
+  ),
 );
-getNumberOfCharactersToFirstMarker(inputPathDaySix, 14).then(number =>
+void getNumberOfCharactersToFirstMarker(inputPathDaySix, 14).then(number =>
   console.log(
-    `Day 6 Part 2 - Number of chars to first message marker: ${number}`
-  )
+    `Day 6 Part 2 - Number of chars to first message marker: ${number}`,
+  ),
 );
 
 // Day 7
 const inputPathDaySeven = 'challenges/day7/input/challenge.txt';
-sumFolderSizeForThreshold(inputPathDaySeven, 100000).then(sum =>
-  console.log(`Day 7 Part 1 - Sum of folders with size <= 100000: ${sum}`)
+void sumFolderSizeForThreshold(inputPathDaySeven, 100000).then(sum =>
+  console.log(`Day 7 Part 1 - Sum of folders with size <= 100000: ${sum}`),
 );
-sizeOfSmallestDirectoryToDelete(inputPathDaySeven).then(size =>
-  console.log(`Day 7 Part 2 - Size of folder to delete: ${size}`)
+void sizeOfSmallestDirectoryToDelete(inputPathDaySeven).then(size =>
+  console.log(`Day 7 Part 2 - Size of folder to delete: ${size}`),
 );
 
 // Day 8
 const inputPathDayEight = 'challenges/day8/input/challenge.txt';
-getNumberOfVisibleTrees(inputPathDayEight).then(count =>
-  console.log(`Day 8 Part 1 - Number of visible trees: ${count}`)
+void getNumberOfVisibleTrees(inputPathDayEight).then(count =>
+  console.log(`Day 8 Part 1 - Number of visible trees: ${count}`),
 );
-getHighestScenicScore(inputPathDayEight).then(score =>
-  console.log(`Day 8 Part 2 - Highest scenic score is: ${score}`)
+void getHighestScenicScore(inputPathDayEight).then(score =>
+  console.log(`Day 8 Part 2 - Highest scenic score is: ${score}`),
 );
 
 // Day 9
 const inputPathDayNine = 'challenges/day9/input/challenge.txt';
-getNumberOfPositionsVisitedByTail(inputPathDayNine, 2).then(count =>
-  console.log(`Day 9 Part 1 - Number positions visited at least once: ${count}`)
+void getNumberOfPositionsVisitedByTail(inputPathDayNine, 2).then(count =>
+  console.log(
+    `Day 9 Part 1 - Number positions visited at least once: ${count}`,
+  ),
 );
-getNumberOfPositionsVisitedByTail(inputPathDayNine, 10).then(count =>
-  console.log(`Day 9 Part 2 - Number positions visited at least once: ${count}`)
+void getNumberOfPositionsVisitedByTail(inputPathDayNine, 10).then(count =>
+  console.log(
+    `Day 9 Part 2 - Number positions visited at least once: ${count}`,
+  ),
 );

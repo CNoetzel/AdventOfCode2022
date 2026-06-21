@@ -31,7 +31,7 @@ const isTreeVisibleFrom = (
   direction: Direction,
   forest: Array<Array<number>>,
   row: number,
-  col: number
+  col: number,
 ): boolean => {
   const treeHeigth = forest[row][col];
   let highestVal = 0;
@@ -68,7 +68,7 @@ const getScenicScoreTo = (
   direction: Direction,
   forest: Array<Array<number>>,
   row: number,
-  col: number
+  col: number,
 ): number => {
   const treeHeight = forest[row][col];
   let score = 0;
@@ -116,7 +116,7 @@ const getScenicScoreTo = (
 const isTreeVisible = (
   forest: Array<Array<number>>,
   row: number,
-  col: number
+  col: number,
 ): boolean => {
   // based on the position of the tree to check it may be more performant
   // to begin the check on the edge nearest to the tree
@@ -131,7 +131,7 @@ const isTreeVisible = (
 const getScenicScore = (
   forest: Array<Array<number>>,
   row: number,
-  col: number
+  col: number,
 ) => {
   return (
     getScenicScoreTo(Direction.TOP, forest, row, col) *
@@ -142,7 +142,7 @@ const getScenicScore = (
 };
 
 export const getNumberOfVisibleTrees = async (
-  path: string
+  path: string,
 ): Promise<number> => {
   const forest = await buildForest(path);
 

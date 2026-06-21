@@ -24,7 +24,8 @@ const getPriorityOfGroup = (rucksacks: string[]): number => {
   const elfThreeItems = rucksacks[2].split('');
   const badgeItem =
     elfOneItems.find(
-      item => elfTwoItems.indexOf(item) >= 0 && elfThreeItems.indexOf(item) >= 0
+      item =>
+        elfTwoItems.indexOf(item) >= 0 && elfThreeItems.indexOf(item) >= 0,
     ) || '';
   return alphabet.indexOf(badgeItem) + 1;
 };

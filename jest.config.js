@@ -12,5 +12,5 @@ module.exports = {
       statements: 90,
     },
   },
-  testPathIgnorePatterns: ["build"]
+  testPathIgnorePatterns: ['build'],
 };

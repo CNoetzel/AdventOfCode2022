@@ -9,9 +9,9 @@ const file = (path: string) =>
   });
 
 // function to sum up calories carried be each elve
-const sumCalories = (path: string): Promise<Array<Number>> =>
-  new Promise<Number[]>(res => {
-    const calories: Number[] = [];
+const sumCalories = (path: string): Promise<Array<number>> =>
+  new Promise<number[]>(res => {
+    const calories: number[] = [];
     let tmpSum = 0;
     file(path)
       .on('line', line => {
@@ -37,6 +37,6 @@ export const getCalories = async (path: string, numberOfElves: number) => {
     .reduce(
       (accumulator, currentValue) =>
         accumulator.valueOf() + currentValue.valueOf(),
-      0
+      0,
     ); // sum values
 };

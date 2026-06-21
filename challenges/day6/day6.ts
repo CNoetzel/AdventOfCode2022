@@ -29,7 +29,7 @@ const findMarkerInStream = async (stream: fs.ReadStream, packetSize: number) =>
 
 export const getNumberOfCharactersToFirstMarker = async (
   path: string,
-  packetSize: number
+  packetSize: number,
 ): Promise<number> => {
   const readable = fs.createReadStream(path, {
     encoding: 'utf8',

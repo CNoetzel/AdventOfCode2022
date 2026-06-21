@@ -87,7 +87,7 @@ const initRope = (length: number): Array<Position> => {
 
 export const getNumberOfPositionsVisitedByTail = async (
   path: string,
-  ropeLength: number
+  ropeLength: number,
 ): Promise<number> =>
   new Promise<number>(res => {
     const visitedPositions = new Set<string>();

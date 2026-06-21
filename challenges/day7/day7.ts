@@ -28,14 +28,14 @@ export const buildFolderStructure = async (path: string) =>
           // do nothing
         } else if (line.match(folderRgx)) {
           currentDir.subFolders.push(
-            new Folder(line.split(' ')[1], currentDir)
+            new Folder(line.split(' ')[1], currentDir),
           );
         } else if (line.match(fileRgx)) {
           const fileData = line.split(' ');
           currentDir.files.push(new File(fileData[1], +fileData[0]));
         } else if (line.match(moveToFolderCmd)) {
           currentDir = currentDir.subFolders.filter(
-            f => f.name === line.split(' ')[2]
+            f => f.name === line.split(' ')[2],
           )[0];
         } else if (line.match(moveToParentCmd)) {
           currentDir = currentDir.parent!;
@@ -58,7 +58,7 @@ const sumRecursive = (folder: Folder, threshold: number) => {
 let folderWithSmallestSize: number | undefined = undefined;
 const getSizeOfSmallestFolderAboveThreshold = (
   folder: Folder,
-  threshold: number
+  threshold: number,
 ) => {
   const size = folder.getSize();
   folderWithSmallestSize =
@@ -67,13 +67,13 @@ const getSizeOfSmallestFolderAboveThreshold = (
       ? size
       : folderWithSmallestSize;
   folder.subFolders.forEach(f =>
-    getSizeOfSmallestFolderAboveThreshold(f, threshold)
+    getSizeOfSmallestFolderAboveThreshold(f, threshold),
   );
 };
 
 export const sumFolderSizeForThreshold = async (
   path: string,
-  threshold: number
+  threshold: number,
 ): Promise<number> => {
   const folderStructure = await buildFolderStructure(path);
   sumRecursive(folderStructure, threshold);
