@@ -1,3 +1,4 @@
+import { describe, it, expect } from '@jest/globals';
 import {getScore, Strategy} from './day2';
 
 describe('testsuite Day 2', () => {

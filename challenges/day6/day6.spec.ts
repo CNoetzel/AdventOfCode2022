@@ -1,3 +1,4 @@
+import { describe, it, expect } from '@jest/globals';
 import {getNumberOfCharactersToFirstMarker} from './day6';
 
 describe('testsuite Day 6', () => {

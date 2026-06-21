@@ -1,4 +1,7 @@
 module.exports = {
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+
   collectCoverageFrom: ['./challenges/**/*.{ts,tsx}'],
   coverageDirectory: 'coverage',
   coverageThreshold: {
@@ -8,9 +11,6 @@ module.exports = {
       lines: 90,
       statements: 90,
     },
-  },
-  transform: {
-    '^.+\\.ts$': 'ts-jest',
   },
   testPathIgnorePatterns: ["build"]
 };

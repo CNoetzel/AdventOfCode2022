@@ -1,3 +1,4 @@
+import { describe, it, expect } from '@jest/globals';
 import {getHighestScenicScore, getNumberOfVisibleTrees} from './day8';
 
 describe('testsuite Day 8', () => {

@@ -1,3 +1,4 @@
+import { describe, it, expect } from '@jest/globals';
 import {getPrioritySum, getPrioritySumOfGroups} from './day3';
 
 describe('testsuite Day 3', () => {

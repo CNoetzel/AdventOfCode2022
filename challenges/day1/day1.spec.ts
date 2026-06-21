@@ -1,3 +1,4 @@
+import { describe, it, expect } from '@jest/globals';
 import {getCalories} from './day1';
 
 describe('testsuite Day 1', () => {

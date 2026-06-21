@@ -1,3 +1,4 @@
+import { describe, it, expect } from '@jest/globals';
 import {getNumberOfPositionsVisitedByTail} from './day9';
 
 describe('testsuite Day 9', () => {
