@@ -1,0 +1,50 @@
+name: Dependabot Auto-Merge
+
+on:
+  pull_request:
+    branches: [ master ]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  test-and-merge:
+    runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]'
+
+    steps:
+      - name: Fetch Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v2
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+
+      # Automatically approve and merge if tests pass.
+      # (Optionally filter by update type, e.g. only patch or minor:
+      #  if: steps.metadata.outputs.update-type != 'version-update:semver-major')
+      - name: Approve and merge PR
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr review --approve "$PR_URL"
+          # Try auto-merge (if branch protection / required checks are enabled)
+          # or merge immediately if auto-merge is not required.
+          gh pr merge --auto --squash "$PR_URL" || gh pr merge --squash "$PR_URL"
+
